@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class RAMainViewController;
+
 @interface RAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) RAMainViewController *mainCtl;
 
 @end

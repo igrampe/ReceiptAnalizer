@@ -7,13 +7,16 @@
 //
 
 #import "RAAppDelegate.h"
+#import "RAMainViewController.h"
 
 @implementation RAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	self.mainCtl = [[RAMainViewController alloc] initWithNibName:@"RAMainViewController" bundle:nil];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+	self.window.rootViewController = self.mainCtl;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
